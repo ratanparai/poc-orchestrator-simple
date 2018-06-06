@@ -1,32 +1,16 @@
 package com.ratanparai.orchestrator.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
 public class Olcm {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
     private String description;
 
     public Olcm() {}
 
-    public Olcm(String titile, String description) {
-        this.title = titile;
+    public Olcm(String title, String description) {
+        this.title = title;
         this.description = description;
     }
-
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
-
 
 	/**
 	 * @return the title
@@ -54,5 +38,19 @@ public class Olcm {
 	 */
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	/**
+	 * @return the id
+	 */
+	public Long getId() {
+		return id;
+	}
+
+	/**
+	 * @param id the id to set
+	 */
+	public void setId(Long id) {
+		this.id = id;
 	}
 }
