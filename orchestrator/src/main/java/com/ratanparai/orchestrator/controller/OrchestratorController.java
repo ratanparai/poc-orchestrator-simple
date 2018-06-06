@@ -31,15 +31,18 @@ public class OrchestratorController {
     private List<Olcm> populList(){
         List<Olcm> data = new ArrayList<>();
 
-        Olcm[] olcms = restTemplate.getForObject("http://cms:8080", Olcm[].class);
-        data.addAll(Arrays.asList(olcms));
+        String[] listOfServices = {"cms", "account", "loan"};
 
-        Olcm[] olcms2 = restTemplate.getForObject("http://account:8080", Olcm[].class);
-        data.addAll(Arrays.asList(olcms2));
-
-        Olcm[] olcms3 = restTemplate.getForObject("http://loan:8080", Olcm[].class);
-        data.addAll(Arrays.asList(olcms3));
-
+        for (String serviceName : listOfServices) {
+            data.addAll(getListOfOlcm(serviceName));
+        }
+        
         return data;
+    }
+
+    private List<Olcm> getListOfOlcm(String nameOfService) {
+        Olcm[] olcms = restTemplate.getForObject("http://"+ nameOfService +":8080", Olcm[].class);
+        return Arrays.asList(olcms);
+
     }
 }
