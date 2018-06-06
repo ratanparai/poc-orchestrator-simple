@@ -15,5 +15,11 @@ mvn clean package
 docker build -t poc/orchestrator:simple --no-cache .
 cd ..
 
+# CMS
+cd cms
+mvn clean package
+docker build -t poc/cms:simple --no-cache .
+cd ..
+
 
 

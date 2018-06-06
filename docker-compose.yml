@@ -5,3 +5,7 @@ services:
 
   orchestrator:
     image: poc/orchestrator:simple
+  
+  cms:
+    image: poc/cms:simple
+    

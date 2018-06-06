@@ -7,3 +7,7 @@ services:
   orchestrator:
     ports:
       - "5101:8080"
+
+  cms:
+    ports:
+      - "5102:8080"
