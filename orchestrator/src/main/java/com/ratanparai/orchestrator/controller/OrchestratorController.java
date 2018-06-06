@@ -37,6 +37,9 @@ public class OrchestratorController {
         Olcm[] olcms2 = restTemplate.getForObject("http://account:8080", Olcm[].class);
         data.addAll(Arrays.asList(olcms2));
 
+        Olcm[] olcms3 = restTemplate.getForObject("http://loan:8080", Olcm[].class);
+        data.addAll(Arrays.asList(olcms3));
+
         return data;
     }
 }
