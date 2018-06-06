@@ -1,0 +1,7 @@
+version : '3'
+services:
+  frontend:
+    image: poc/frontend:simple
+
+  orchestrator:
+    image: poc/orchestrator:simple

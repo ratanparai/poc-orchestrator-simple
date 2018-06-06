@@ -1,0 +1,9 @@
+version : '3'
+services:
+  frontend:
+    ports:
+      - "5100:80"
+
+  orchestrator:
+    ports:
+      - "5101:8080"
