@@ -26,3 +26,9 @@ cd account
 mvn clean package
 docker build -t poc/account:simple --no-cache .
 cd ..
+
+# Loan
+cd loan
+mvn clean package
+docker build -t poc/loan:simple --no-cache .
+cd ..

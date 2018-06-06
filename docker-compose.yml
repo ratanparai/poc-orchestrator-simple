@@ -11,5 +11,8 @@ services:
 
   account:
     image: poc/account:simple
+
+  loan:
+    image: poc/loan:simple
   
     
