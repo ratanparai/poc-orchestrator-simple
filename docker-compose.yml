@@ -8,4 +8,8 @@ services:
   
   cms:
     image: poc/cms:simple
+
+  account:
+    image: poc/account:simple
+  
     

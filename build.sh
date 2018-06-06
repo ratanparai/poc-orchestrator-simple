@@ -20,3 +20,9 @@ cd cms
 mvn clean package
 docker build -t poc/cms:simple --no-cache .
 cd ..
+
+# Account
+cd account
+mvn clean package
+docker build -t poc/account:simple --no-cache .
+cd ..
