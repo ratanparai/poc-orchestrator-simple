@@ -1,6 +1,6 @@
 #!/bin/bash
 # Author: Ratan Sunder Parai
-
+set -e
 
 # Front-end
 cd frontend
@@ -20,6 +20,3 @@ cd cms
 mvn clean package
 docker build -t poc/cms:simple --no-cache .
 cd ..
-
-
-
